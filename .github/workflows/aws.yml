@@ -1,4 +1,4 @@
-name: Deploy to EC2
+name: Deploy to EC2 on ec2
 
 on:
   push:
@@ -23,7 +23,5 @@ jobs:
     
     - name: Deploy to EC2
       run: |
-        mkdir -p ec2-user@18.206.185.233:/home/ec2-user/web-app
-        cd /home/ec2-user/web-app
         git clone https://github.com/abbddullah/temp-website.git
         echo "operation successful"
