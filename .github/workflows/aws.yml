@@ -19,10 +19,11 @@ jobs:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1 
+
     
     - name: Deploy to EC2
       run: |
-        mkdir -p /home/ec2-user/web-app
+        mkdir -p ec2-user@18.206.185.233:/home/ec2-user/web-app
         cd /home/ec2-user/web-app
         git clone https://github.com/abbddullah/temp-website.git
         echo "operation successful"
